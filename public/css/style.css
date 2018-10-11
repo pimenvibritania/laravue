@@ -31,14 +31,18 @@ body{
    color: rgb(200, 198,186);
 }
 
-#jumbotron_index{
-   color: #ffffff;
+#jumbotron_index{ 
+   color: #22bb96;
    background: #22bb96;
    box-shadow: 0 5px 10px #888888;
-   padding: 50px 10px 10px 50px;
+   padding: 50px 30px 30px 30px;
    border-radius: 10px;
    border-bottom-left-radius: 5px;
    border-bottom-right-radius: 5px;
+}
+
+#jumbotron_index h1, p{
+   color: #ffffff;
 }
 
 .btn-warning{
@@ -46,3 +50,10 @@ body{
    background-color: #ffc107;
    border-color: #ffc107;
 }
+
+.table .thead-darks th {
+   color: #f8fafc;
+   background-color: #22bb96;
+   border-color: #dee2e6;
+ }
+ 

@@ -3,8 +3,12 @@
 @section('content')
 <div class="jumbotron jumbotron-fluid">
    <div class="container" id="jumbotron_index">
-     <h1>Bootstrap Tutorial</h1> 
-     <p>Bootstrap is the most popular HTML, CSS...</p> 
+     <div class="text-center">
+       <h1>LaraVue CRUD</h1>
+       <p>Create CRUD with Laravel and Vue.js</p>
+     </div>
+    
+     <router-view></router-view>
    </div>
  </div>
 @endsection
