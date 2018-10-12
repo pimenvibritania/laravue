@@ -15,9 +15,9 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Title.....</td>
-            <td>Description...</td>
+          <tr v-for="post in posts" >
+            <td>{{post.title}}</td>
+            <td>{{post.description}}</td>
             <td><button class="btn btn-primary  "><i class="fa fa-eye"></i> View</button></td>
             <td><button class="btn btn-success"><i class="fa fa-pencil-square-o"></i> Edit</button></td>
             <td><button class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button></td>
@@ -27,3 +27,28 @@
       </div>
    </div>
 </template>
+
+<script>
+
+export default {
+  data() {
+    return {
+      posts: [],
+      errors: []
+    }
+  },
+
+  // Fetches posts when the component is created.
+  created() {
+    axios.get(`/posts`)
+    .then(response => {
+      // JSON responses are automatically parsed.
+      this.posts = response.data
+    })
+    .catch(e => {
+      this.errors.push(e)
+    })
+
+  }
+}
+</script>
