@@ -5,6 +5,7 @@
    <div class="container" id="jumbotron_index">
      <div class="text-center">
        <h1>LaraVue CRUD</h1>
+       
        <p>Create CRUD with Laravel and Vue.js</p>
      </div>
     
