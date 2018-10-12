@@ -18,7 +18,9 @@
           <tr v-for="post in posts" >
             <td>{{post.title}}</td>
             <td>{{post.description}}</td>
-            <td><button class="btn btn-primary  "><i class="fa fa-eye"></i> View</button></td>
+            <td>
+              <router-link :to = "{name : 'readPost', params:{id:post.id}}" class="btn btn-info"><i class="fa fa-eye"></i> Show</router-link>
+            </td>
             <td><button class="btn btn-success"><i class="fa fa-pencil-square-o"></i> Edit</button></td>
             <td><button class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button></td>
           </tr>

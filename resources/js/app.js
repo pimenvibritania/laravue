@@ -16,14 +16,16 @@ Vue.use(VueRouter)
 
 import Index from './components/Index.vue';
 import Create from './components/Create.vue';
+import Read from './components/Read.vue';
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
 const routes = [
     { path: '/', component: Index },
-    { path: '/create', component: Create }
+    { path: '/create', component: Create},
+    { path: '/create/:id', component: Read, name:'readPost' }
   ]
-
+    
 const router = new VueRouter({
 routes // short for `routes: routes`
 })

@@ -56,4 +56,11 @@ body{
    background-color: #22bb96;
    border-color: #dee2e6;
  }
- 
+
+#color {
+  color: #22bb96 !important;
+}
+
+.shad {
+  text-shadow: 1px 3px 1px rgba(0, 0, 0, 0.7);
+}

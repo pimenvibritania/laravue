@@ -43,7 +43,7 @@ methods:{
     axios.post(`/posts`, this.posts)
     .then(response => {
         console.log(response)
-        this.$router.push({path: '/'})
+        this.$router.push({path:'/'})
         this.posts = response.data
     })
     .catch(e => {
