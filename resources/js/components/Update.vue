@@ -3,10 +3,10 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card card-default">
-                    <div class="card-header" style="text-align:center">Create New Post</div>
+                    <div class="card-header" style="text-align:center">Edit Post</div>
 
                     <div class="card-body">
-                        <form v-on:submit="submitPost()">
+                        <form v-on:submit="submitPostEdit()">
                            <div class="form-group">
                               <input type="text" placeholder="Title..." v-model="posts.title" class="form-control">
                            </div>
@@ -15,7 +15,7 @@
                            </div>
                            <div class="form-group">
                               <router-link to="/" class="btn btn-outline-danger">Cancel</router-link>
-                              <button class="btn btn-outline-success">Submit</button>
+                              <button class="btn btn-outline-success">Update</button>
                            </div>
                         </form>
                     </div>
@@ -38,9 +38,23 @@ export default {
     }
   },
 
+created() { 
+
+     let id = this.$route.params.id;
+    axios.get(`/posts/` +id+ '/edit')
+    .then(response => {
+      this.posts = response.data
+    })
+    .catch(e => {
+      this.errors.push(e)
+    })
+
+  },
+
 methods:{
-    submitPost() {
-    axios.post(`/posts`, this.posts)
+    submitPostEdit() {
+    let id = this.$route.params.id;
+    axios.patch(`/posts/` +id, this.posts)
     .then(response => {
         console.log(response)
         this.$router.push({path:'/'})
