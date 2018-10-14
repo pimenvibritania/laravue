@@ -16,7 +16,7 @@ body{
 .navbar-laravel{
    background: #0f0c29;
    background: -webkit-linear-gradient(to right, #24243e, #302b63,#0f0c29);
-   background:  linear-gradient(to right, #22bb96, rgb(56, 193, 114), #22bb96);
+   background:  linear-gradient(to right, #22bb96,#22bb9573, #22bb96);
    -webkit-box-shadow: 0 2px 4px;
    box-shadow: 0 2px 4px;
 }
